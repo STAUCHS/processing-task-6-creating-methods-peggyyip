@@ -25,14 +25,14 @@ public class Sketch extends PApplet {
     drawHouse(250, 50);
     drawHouse(150, 150);
 
-    drawTree(20, 70, 40, 50, 70);
-    drawTree(350, 70, 67, 60, 255);
+    drawTree(20, 70, 40, 50, 91, 108, 176);
+    drawTree(350, 70, 67, 60, 240, 199, 141);
 
     drawHouse(250, 250);
     drawHouse(50, 250);
 
-    drawTree(20, 270, 40, 70, 200);
-    drawTree(350, 210, 70, 100, 30);
+    drawTree(20, 270, 40, 70, 158, 86, 179);
+    drawTree(350, 210, 70, 100, 137, 173, 128);
 
     // Level 4 - Grass
     intGrassLocationX = grassLocationX(0);
@@ -77,15 +77,17 @@ public class Sketch extends PApplet {
    * @param: treeY; Y coordinate
    * @param: treeSize; trunk size
    * @param: leafSize; size of leaves
-   * @param: treeColour; colour of leaves
+   * @param: treeColourR; red colour of leaves
+   * @param: treeColourG; green colour of leaves
+   * @param: treeColourB; blue colour of leaves
    * @return: void
    * @author: P. Yip
    */
-    private void drawTree(float treeX, float treeY, float treeSize, float leafSize, float treeColour) {
+    private void drawTree(float treeX, float treeY, float treeSize, float leafSize, float treeColourR, float treeColourG, float treeColourB) {
       noStroke();
       fill(133, 112, 110);
       rect(treeX, treeY, treeSize, treeSize * 2);
-      fill(treeColour);
+      fill(treeColourR, treeColourG, treeColourB);
       ellipse(treeX, treeY, leafSize * 3 / 2, leafSize);
       ellipse(treeX + 20, treeY, leafSize, leafSize);
       ellipse(treeX + 20, treeY - 25, leafSize, leafSize);
