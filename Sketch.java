@@ -15,7 +15,7 @@ public class Sketch extends PApplet {
   }
 
   public void draw() {
-    // Defining variables for level 3
+    // Defining variables for level 4
     int intGrassLocationX;
     int intGrassLocationY;
 
